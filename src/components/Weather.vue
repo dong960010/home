@@ -28,7 +28,7 @@ const mainKey = import.meta.env.VITE_WEATHER_KEY;
 const weatherData = reactive({
   adCode: {
     city: null, // 城市
-    adcode: null, // 城市编码
+    adcode: 440400, // 城市编码
   },
   weather: {
     weather: null, // 天气现象
