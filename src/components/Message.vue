@@ -10,7 +10,7 @@
       </div>
     </div>
     <!-- 简介 -->
-    <div class="description cards" @click="changeBox">
+    <div class="description cards">
       <div class="content">
         <Icon size="16">
           <QuoteLeft />
@@ -55,20 +55,20 @@ const descriptionText = reactive({
 });
 
 // 切换右侧功能区
-const changeBox = () => {
-  if (store.getInnerWidth >= 990) {
-    store.boxOpenState = !store.boxOpenState;
-  } else {
-    ElMessage({
-      message: "当前页面宽度不足以开启盒子",
-      grouping: true,
-      icon: h(Error, {
-        theme: "filled",
-        fill: "#efefef",
-      }),
-    });
-  }
-};
+// const changeBox = () => {
+//   if (store.getInnerWidth >= 990) {
+//     store.boxOpenState = !store.boxOpenState;
+//   } else {
+//     ElMessage({
+//       message: "当前页面宽度不足以开启盒子",
+//       grouping: true,
+//       icon: h(Error, {
+//         theme: "filled",
+//         fill: "#efefef",
+//       }),
+//     });
+//   }
+// };
 
 // 监听状态变化
 watch(
@@ -92,6 +92,7 @@ watch(
     flex-direction: row;
     align-items: center;
     animation: fade 0.5s;
+    margin-bottom: 2rem;
     .logo-img {
       // border-radius: 50%;
       width: 120px;
@@ -130,7 +131,7 @@ watch(
 
   .description {
     padding: 1rem;
-    margin-top: 3.5rem;
+    // margin-top: 3.5rem;
     max-width: 460px;
     animation: fade 0.5s;
 

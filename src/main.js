@@ -5,11 +5,14 @@ import App from "@/App.vue";
 import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 
+import VueRouter from './router/index'
+
 const app = createApp(App);
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
 app.use(pinia);
+app.use(VueRouter)
 app.mount("#app");
 
 // PWA

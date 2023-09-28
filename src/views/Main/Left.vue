@@ -1,23 +1,25 @@
 <template>
   <div :class="store.mobileOpenState ? 'left hidden' : 'left'">
     <Message />
-    <SocialLinks />
+    <SiteStatics />
   </div>
 </template>
 
 <script setup>
 import { mainStore } from "@/store";
 import Message from "@/components/Message.vue";
-import SocialLinks from "@/components/SocialLinks.vue";
+import SiteStatics from "@/components/SiteStatic.vue";
 const store = mainStore();
 </script>
 
 <style lang="scss" scoped>
 .left {
   // flex: 1 0 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 50%;
   margin-right: 10px;
-  transform: translateY(20px);
   &.hidden {
     display: none;
   }

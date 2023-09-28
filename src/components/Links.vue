@@ -2,9 +2,9 @@
   <div v-if="siteLinks[0]" class="links">
     <div class="line">
       <Icon size="20">
-        <Link />
+        <Accessibility24Regular />
       </Icon>
-      <span class="title">网站列表</span>
+      <span class="title">去码头整点薯条嘛</span>
     </div>
     <!-- 网站列表 -->
     <Swiper
@@ -44,6 +44,7 @@
 import { Icon } from "@vicons/utils";
 // 可前往 https://www.xicons.org 自行挑选并在此处引入
 import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, LaptopCode } from "@vicons/fa"; // 注意使用正确的类别
+import { AnimalTurtle16Regular, Accessibility24Regular } from "@vicons/fluent"; // 注意使用正确的类别
 import { mainStore } from "@/store";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Mousewheel } from "swiper";
@@ -72,6 +73,7 @@ const siteIcon = {
   Book,
   Fire,
   LaptopCode,
+  AnimalTurtle16Regular
 };
 
 // 链接跳转
@@ -83,9 +85,6 @@ const jumpLink = (data) => {
   }
 };
 
-onMounted(() => {
-  console.log(siteLinks);
-});
 </script>
 
 <style lang="scss" scoped>
@@ -99,6 +98,7 @@ onMounted(() => {
     .title {
       margin-left: 8px;
       font-size: 1.15rem;
+      font-style: italic;
       text-shadow: 0 0 5px #00000050;
     }
   }

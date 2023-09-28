@@ -99,7 +99,6 @@ onMounted(() => {
   nextTick(() => {
     try {
       getPlayerList(props.songServer, props.songType, props.songId).then((res) => {
-        console.log(res);
         // 生成歌单信息
         playIndex.value = Math.floor(Math.random() * res.length);
         playListCount.value = res.length;

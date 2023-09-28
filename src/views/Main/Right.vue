@@ -34,6 +34,9 @@ const siteUrl = computed(() => {
 <style lang="scss" scoped>
 .right {
   // flex: 1 0 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 50%;
   margin-left: 0.75rem;
   .logo {
